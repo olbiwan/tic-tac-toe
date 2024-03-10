@@ -1,0 +1,41 @@
+name: Node.js
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sonarcloud:
+    name: Build and Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install Dependencies
+        run: |
+          cd nodejs
+          npm install
+      - name: Running tests
+        run: |
+          cd nodejs
+          npm test
+      - uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage
+          path: coverage
+      - name: SonarCloud
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args:
+            -Dsonar.core.codeCoveragePlugin=cobertura
+            -Dsonar.organization=olbiwan
+            -Dsonar.projectKey=tictactoe-nodejs
+            -Dsonar.projectVersion=1.0.0
+            -Dsonar.javascript.lcov.reportPaths=./nodejs/coverage/lcov.info
+            -Dsonar.sources=./nodejs/
