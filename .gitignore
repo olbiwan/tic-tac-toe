@@ -1,0 +1,24 @@
+# Eclipse IDE
+.classpath
+.project
+.settings/
+*/.project
+
+# IntelliJ IDEA
+*.iml
+*/.idea/
+/.idea/
+
+# Java
+*/bin/
+*/target/
+/bin/
+/target/
+
+# Python
+**/__pycache__/
+**/python/venv/
+
+# Node.js
+**/node_modules/
+**/nodejs/package-lock.json

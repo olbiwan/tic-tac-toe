@@ -1,0 +1,17 @@
+{
+    "name": "tictactoe",
+    "version": "1.0.0",
+    "main": "./tictactoeTicTacToeTypeScript.ts",
+    "scripts": {
+        "start": "node ./tictactoe/index.ts",
+        "test": "jest"
+    },
+    "author": "William Peterson Olbi",
+    "license": "ISC",
+    "dependencies": {
+        "prompt-sync": "^4.2.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}

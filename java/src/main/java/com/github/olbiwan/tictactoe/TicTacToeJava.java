@@ -1,0 +1,92 @@
+package com.github.olbiwan.tictactoe;
+
+import lombok.AllArgsConstructor;
+import lombok.experimental.ExtensionMethod;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Scanner;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+import static java.util.stream.IntStream.range;
+import static org.apache.commons.lang3.StringUtils.SPACE;
+
+@ExtensionMethod({NumberUtils.class, StringUtils.class})
+@AllArgsConstructor
+public class TicTacToeJava {
+
+    private Supplier<String> input;
+    private Consumer<String> output;
+
+    // Represents the squares on the Tic-tac-toe board.
+    private final Map<Point, Player> board = new HashMap<>() {{
+        put(new Point(1, 1), null); put(new Point(1, 2), null); put(new Point(1, 3), null);
+        put(new Point(2, 1), null); put(new Point(2, 2), null); put(new Point(2, 3), null);
+        put(new Point(3, 1), null); put(new Point(3, 2), null); put(new Point(3, 3), null);
+    }};
+
+    // Represents the players and an empty position.
+    private enum Player { X, O }
+
+    public static void main(String[] args) {
+        try(final var scanner = new Scanner(System.in)) {
+            new TicTacToeJava(scanner::next, System.out::print).start();
+        }
+    }
+
+    public void start() {
+        // A player has a maximum of 5 moves.
+        endLoop: for(int i = 1; i <= 5; i++) for(Player player : Player.values()) {
+            final var messageEndGame = play(player);
+            if(messageEndGame != null) {
+                output.accept(messageEndGame);
+                break endLoop;
+            }
+        }
+    }
+
+    private String play(final Player player) {
+
+        // Waits for a valid move.
+        while(!board.replace(new Point(readInput(player, "row"), readInput(player, "column")), null, player)) output.accept("Invalid position, try again!\n");
+
+        drawBoard();
+
+        return checkEndGame(player);
+
+    }
+
+    private int readInput(final Player player, final String location) {
+        output.accept(String.format("Player '%s' it's your turn, enter your position (%s): ", player, location));
+        // Disregard non-numeric characters.
+        return input.get().defaultIfBlank("0").replacePattern("[^0-9]", "0").createInteger();
+    }
+
+    private void drawBoard() {
+        range(1, 4).forEach(line -> range(1, 4).forEach(column -> output.accept(String.format(" %s " + (column == 3 ? "%n" : "|"), Objects.toString(board.get(new Point(line, column)), SPACE)))));
+    }
+
+    private String checkEndGame(final Player player) {
+        return checkWinLine(player) || checkWinColumn(player) || checkWinDiagonal(player) ? String.format("Player %s won!!!", player) : board.containsValue(null) ? null : "There was no winner.";
+    }
+
+    private boolean checkWinLine(final Player player) {
+        return range(1, 4).anyMatch(line -> range(1, 4).allMatch(column -> player.equals(board.get(new Point(line, column)))));
+    }
+
+    private boolean checkWinColumn(final Player player) {
+        return range(1, 4).anyMatch(column -> range(1, 4).allMatch(line -> player.equals(board.get(new Point(line, column)))));
+    }
+
+    // If the center belongs to the player then check the corner squares.
+    private boolean checkWinDiagonal(final Player player) {
+        return player.equals(board.get(new Point(2, 2))) && (player.equals(board.get(new Point(1, 1))) && player.equals(board.get(new Point(3, 3)))) ||
+                                                            (player.equals(board.get(new Point(1, 3))) && player.equals(board.get(new Point(3, 1))));
+    }
+
+}
