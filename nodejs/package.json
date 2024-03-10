@@ -1,0 +1,16 @@
+{
+    "name": "tictactoe",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node ./src/main/index.ts",
+        "test": "jest --coverage"
+    },
+    "author": "William Peterson Olbi",
+    "license": "ISC",
+    "dependencies": {
+        "prompt-sync": "^4.2.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
