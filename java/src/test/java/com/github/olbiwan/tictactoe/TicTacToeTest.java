@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import static org.mockito.Mockito.*;
 
-class TicTacToeJavaTest {
+class TicTacToeTest {
 
     @BeforeEach
     void setUp() {
@@ -45,7 +45,7 @@ class TicTacToeJavaTest {
 
     private void playWithPositions(final String messageEndGame, final String position, final String... positions) {
         final Scanner scanner = when(mock(Scanner.class).next()).thenReturn(position, positions).getMock();
-        new TicTacToeJava(scanner::next, System.out::print).start();
+        new TicTacToe(scanner::next, System.out::print).start();
         verify(System.out).print(messageEndGame);
     }
 

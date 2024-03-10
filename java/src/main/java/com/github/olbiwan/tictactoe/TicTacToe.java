@@ -18,7 +18,7 @@ import static org.apache.commons.lang3.StringUtils.SPACE;
 
 @ExtensionMethod({NumberUtils.class, StringUtils.class})
 @AllArgsConstructor
-public class TicTacToeJava {
+public class TicTacToe {
 
     private Supplier<String> input;
     private Consumer<String> output;
@@ -35,7 +35,7 @@ public class TicTacToeJava {
 
     public static void main(String[] args) {
         try(final var scanner = new Scanner(System.in)) {
-            new TicTacToeJava(scanner::next, System.out::print).start();
+            new TicTacToe(scanner::next, System.out::print).start();
         }
     }
 

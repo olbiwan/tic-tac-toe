@@ -1,10 +1,10 @@
 import unittest
 
 from io import StringIO
-from tictactoe.tictactoe_python import TicTacToePython
+from src.tictactoe import TicTacToe
 from unittest.mock import patch
 
-class TicTacToePythonTest(unittest.TestCase):
+class TicTacToeTest(unittest.TestCase):
 
     def test_invalid_move(self):
         self.play_with_positions("Player O won!!!", "2","2", "m","1", "1","1", "3","3", "1","2", "3","2", "1","23", "1","3")
@@ -27,7 +27,7 @@ class TicTacToePythonTest(unittest.TestCase):
     def play_with_positions(self, message_end_game, *positions):
         with patch('builtins.input', side_effect=list(positions)):
             with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
-                TicTacToePython(lambda message: input(message), lambda message, end=None: print(message, end=end)).main()
+                TicTacToe(lambda message: input(message), lambda message, end=None: print(message, end=end)).start()
                 self.assertTrue(message_end_game in mock_stdout.getvalue())
 
 

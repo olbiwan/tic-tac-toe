@@ -35,6 +35,6 @@ jobs:
             -Dsonar.dynamicAnalysis=reuseReports
             -Dsonar.organization=olbiwan
             -Dsonar.projectKey=tictactoe-python
-            -Dsonar.projectVersion=1.0.0
+            -Dsonar.projectVersion=2.0.0
             -Dsonar.python.coverage.reportPaths=*coverage*.xml
             -Dsonar.sources=./python/

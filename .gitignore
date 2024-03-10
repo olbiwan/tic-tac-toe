@@ -20,5 +20,6 @@
 **/python/venv/
 
 # Node.js
+**/coverage/
 **/node_modules/
 **/nodejs/package-lock.json
