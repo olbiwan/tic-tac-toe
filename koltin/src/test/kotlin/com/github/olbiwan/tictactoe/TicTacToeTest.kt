@@ -6,7 +6,7 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when`
 import java.util.*
 
-class TicTacToeKotlinTest {
+class TicTacToeTest {
 
     @Test
     fun `Given tic-Tac-toe When invalid move Then warn player`() = playWithPositions("Player O won!!!", "2","2", "m","1", "1","1", "3","3", "1","2", "3","2", "1","23", "1","3")
@@ -34,7 +34,7 @@ class TicTacToeKotlinTest {
 
     private fun playWithPositions(messageEndGame: String, position: String, vararg positions: String) {
         val scanner: Scanner = `when`(mock<Scanner>().next()).thenReturn(position, *positions).getMock()
-        TicTacToeKotlin ({ scanner.next() }, { if(it.contains("won") || it.contains("winner")) assertEquals(messageEndGame, it) }).start()
+        TicTacToe ({ scanner.next() }, { if(it.contains("won") || it.contains("winner")) assertEquals(messageEndGame, it) }).start()
     }
 
 }

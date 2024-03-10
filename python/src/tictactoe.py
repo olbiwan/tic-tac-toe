@@ -2,7 +2,7 @@ from enum import Enum
 from python_utils import converters
 from typing import Optional
 
-class TicTacToePython:
+class TicTacToe:
     def __init__(self, input, output):
         # Represents the squares on the Tic-tac-toe board.
         self.BOARD = {
@@ -18,7 +18,7 @@ class TicTacToePython:
         X = 'X'
         O = 'O'
 
-    def main(self):
+    def start(self):
         # A player has a maximum of 5 moves.
         for _ in range(1, 6):
             for player in self.Player:
@@ -65,4 +65,4 @@ class TicTacToePython:
 
 
 if __name__ == '__main__':
-    TicTacToePython(lambda message: input(message), lambda message, end=None: print(message, end=end)).main()
+    TicTacToe(lambda message: input(message), lambda message, end=None: print(message, end=end)).start()

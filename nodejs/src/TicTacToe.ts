@@ -1,4 +1,4 @@
-module.exports = class TicTacToeTypeScript {
+module.exports = class TicTacToe {
 
     board = {
         '1,1': null, '1,2': null, '1,3': null,

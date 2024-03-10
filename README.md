@@ -1,6 +1,6 @@
 <img align="right" width="20%" src="tic-tac-toe.png">
 
-[![Latest release](https://img.shields.io/github/v/release/olbiwan/tic-tac-toe?label=Latest%20release&style=social)](https://github.com/olbiwan/tic-tac-toe/releases/tag/073023)
+[![Latest release](https://img.shields.io/github/v/release/olbiwan/tic-tac-toe?label=Latest%20release&style=social)](https://github.com/olbiwan/tic-tac-toe/releases)
 
 ![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-blue?logo=eclipseide)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-black?logo=intellijidea)
@@ -76,7 +76,7 @@ Below are instructions for running the project in different programming language
   _To validate the configuration, open the command line and type: `pip --version`._
 4. **Download external dependencies** by opening the command line and typing `pip install pytest python-utils` inside folder `tic-tac-toe/python`.  
    _To validate, open the command line and type: `pip show pytest` and `pip show python-utils`._
-6. _Finally_ **run the [Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)**, open the command line and type `py tictactoe/tictactoe_python.py`.
+6. _Finally_ **run the [Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)**, open the command line and type `py tictactoe/src/tictactoe.py`.
 
 </details>
 
@@ -105,57 +105,57 @@ sequenceDiagram
 <details open><summary><b><a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a></b><br><br></summary>
 
 ![Maven](https://img.shields.io/badge/build-Maven-blue?logo=apachemaven)
-[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-14-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-java)
-[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-27-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-java)
+[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-18-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-java)
+[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-28-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-java)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tictactoe-java)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tictactoe-java)
 
 **Dependencies:**
-1. _Dependency - [**Apache Commons Lang**](https://commons.apache.org/proper/commons-lang): Utility library._
-3. _Dependency - [**JUnit 5**](https://junit.org/junit5): Unit testing framework._
-4. _Dependency - [**Mockito**](https://site.mockito.org): Unit testing framework._
-5. _Dependency - [**Project Lombok**](https://projectlombok.org): Library that automatically connects to your editor and creates tools to "spice up" Java._
+1. _[**Apache Commons Lang**](https://commons.apache.org/proper/commons-lang): Utility library._
+3. _[**JUnit 5**](https://junit.org/junit5): Unit testing framework._
+4. _[**Mockito**](https://site.mockito.org): Unit testing framework._
+5. _[**Project Lombok**](https://projectlombok.org): Library that automatically connects to your editor and creates tools to "spice up" Java._
 
 </details>
 
 <details open><summary><b><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">Kotlin</a></b><br><br></summary>
 
 ![Maven](https://img.shields.io/badge/build-Maven-blue?logo=apachemaven)
-[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-14-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-kotlin)
-[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-19-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-kotlin)
+[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-18-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-kotlin)
+[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-22-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-kotlin)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tictactoe-kotlin)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tictactoe-kotlin)
 
 **Dependencies:**
-1. _Dependency - [**Apache Commons Lang**](https://commons.apache.org/proper/commons-lang): Utility library._
-3. _Dependency - [**JUnit 5**](https://junit.org/junit5): Unit testing framework._
-4. _Dependency - [**Mockito**](https://site.mockito.org): Unit testing framework._
+1. _[**Apache Commons Lang**](https://commons.apache.org/proper/commons-lang): Utility library._
+3. _[**JUnit 5**](https://junit.org/junit5): Unit testing framework._
+4. _[**Mockito**](https://site.mockito.org): Unit testing framework._
 
 </details>
 
 <details open><summary><b><a href="https://en.wikipedia.org/wiki/Node.js">Node.js</a></b><br><br></summary>
 
 ![NPM](https://img.shields.io/badge/build-NPM-blue?logo=npm)
-[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-28-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-python)
-[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-29-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-python)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tictactoe-python)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tictactoe-python)  
+[![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-0-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-nodejs)
+[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-74-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-nodejs)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tictactoe-nodejs)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tictactoe-nodejs)  
 
 **Dependencies:**
-1. _Dependency - [**Jest**](https://jestjs.io): Unit testing framework._
+1. _[**Jest**](https://jestjs.io): Unit testing framework._
 
 </details>
 
 <details open><summary><b><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></b><br><br></summary>
 
 [![Cognitive Complexity](https://img.shields.io/badge/cognitive_complexity-28-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-python)
-[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-29-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-python)
+[![Cyclomatic Complexity](https://img.shields.io/badge/cyclomatic_complexity-36-green?logo=sonarcloud)](https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-python)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tictactoe-python)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tictactoe-python)  
 
 **Dependencies:**
-1. _Dependency - [**pytest**](https://docs.pytest.org): Unit testing framework._
-2. _Dependency - [**python-utils**](https://pypi.org/project/python-utils): Utility library._
+1. _[**pytest**](https://docs.pytest.org): Unit testing framework._
+2. _[**python-utils**](https://pypi.org/project/python-utils): Utility library._
 
 </details>
 

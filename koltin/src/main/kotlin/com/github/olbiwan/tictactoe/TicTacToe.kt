@@ -6,7 +6,7 @@ import java.util.*
 /**
  * @param output displayed messages
  */
-class TicTacToeKotlin(private val input: () -> String?, private val output: (message: String) -> Unit) {
+class TicTacToe(private val input: () -> String?, private val output: (message: String) -> Unit) {
 
     // Represents the squares on the Tic-tac-toe board.
     private val board = mutableMapOf <Point, Player?> (
@@ -60,4 +60,4 @@ class TicTacToeKotlin(private val input: () -> String?, private val output: (mes
 
 }
 
-fun main() = Scanner(System.`in`).use { TicTacToeKotlin( { it.next() }, { print(it) } ).start() }
+fun main() = Scanner(System.`in`).use { TicTacToe( { it.next() }, { print(it) } ).start() }
