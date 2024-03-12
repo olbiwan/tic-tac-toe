@@ -37,6 +37,6 @@ jobs:
             -Dsonar.dynamicAnalysis=reuseReports
             -Dsonar.organization=olbiwan
             -Dsonar.projectKey=tictactoe-nodejs
-            -Dsonar.projectVersion=2.0.0
-            -Dsonar.javascript.lcov.reportPaths=*coverage*.lcov
+            -Dsonar.projectVersion=3.0.0
+            -Dsonar.javascript.lcov.reportPaths=./nodejs/coverage/lcov.info
             -Dsonar.sources=./nodejs/

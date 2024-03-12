@@ -45,16 +45,14 @@ class TicTacToe:
             for j in range(1, 4):
                 self.output(f" {' ' if self.BOARD[(i, j)] is None else self.BOARD[(i, j)].value} ", end=('|' if j != 3 else '\n'))
 
+    # If there is a winner or a tie, a message will be sent back.
     def check_end_game(self, player: Player):
-        if self.check_win_line(player) or self.check_win_column(player) or self.check_win_diagonal(player):
+        if self.check_win_column_or_line(player) or self.check_win_diagonal(player):
             return f"Player {player.value} won!!!"
         return None if None in self.BOARD.values() else "There was no winner."
 
-    def check_win_line(self, player: Player):
-        return any(all(self.BOARD[(i, j)] == player for j in range(1, 4)) for i in range(1, 4))
-
-    def check_win_column(self, player: Player):
-        return any(all(self.BOARD[(i, j)] == player for i in range(1, 4)) for j in range(1, 4))
+    def check_win_column_or_line(self, player: Player):
+        return any(all(self.BOARD[(fixed, column)] == player for column in range(1, 4)) or all(self.BOARD[(line, fixed)] == player for line in range(1, 4)) for fixed in range(1, 4))
 
     # If the center belongs to the player then check the corner squares.
     def check_win_diagonal(self, player: Player):

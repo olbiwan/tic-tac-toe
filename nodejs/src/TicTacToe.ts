@@ -38,19 +38,19 @@ module.exports = class TicTacToe {
     readInput = (player, location) => this.input(`Player '${player}' it's your turn, enter your position (${location}): `)
 
     drawBoard = () =>
-        [1, 2, 3].forEach((line, i) => {
-            [1, 2, 3].forEach((column, j) => {
+        [1, 2, 3].forEach(line => {
+            [1, 2, 3].forEach(column => {
                 let player = this.board[`${line},${column}`]
                 process.stdout.write(`${player == null ? " " : player}${column != 3 ? " | " : "\n"}`)
             })
         })
 
+    // If there is a winner or a tie, a message will be sent back.
     checkEndGame = player =>
-        this.checkWinLine(player) || this.checkWinColumn(player) || this.checkWinDiagonal(player) ? `Player ${player} won!!!` : Object.values(this.board).some(value => value == null) ? null : "There was no winner."
+        this.checkWinColumnOrLine(player) || this.checkWinDiagonal(player) ? `Player ${player} won!!!` : Object.values(this.board).some(value => value == null) ? null : "There was no winner."
 
-    checkWinLine = player => [1, 2, 3].some(column => [1, 2, 3].every(line => this.board[`${line},${column}`] === player))
-
-    checkWinColumn = player => [1, 2, 3].some(line => [1, 2, 3].every(column => this.board[`${line},${column}`] === player))
+    checkWinColumnOrLine = player => [1, 2, 3].some(fixed => [1, 2, 3].every(column => this.board[`${fixed},${column}`] === player) ||
+                                                             [1, 2, 3].every(line => this.board[`${line},${fixed}`] === player))
 
     // If the center belongs to the player then check the corner squares.
     checkWinDiagonal = player =>
