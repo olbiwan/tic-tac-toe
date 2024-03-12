@@ -1,5 +1,6 @@
 package com.github.olbiwan.tictactoe
 
+import org.apache.commons.lang3.StringUtils.SPACE
 import java.awt.Point
 import java.util.*
 
@@ -43,16 +44,15 @@ class TicTacToe(private val input: () -> String?, private val output: (message: 
     private fun readInput(player: Player, location: String): Int {
         output("Player '$player' it's your turn, enter your position ($location): ")
         // Disregard non-numeric characters.
-        return (input.invoke() ?: "0").replace("[^0-9]".toRegex(), "0").toInt()
+        return input.invoke()?.toIntOrNull() ?: 0
     }
 
-    private fun drawBoard() = (1 until 4).forEach { line -> (1 until 4).forEach { column -> output(" ${board[Point(line, column)] ?: " "} ${if (column == 3) "\n" else "|"}") } }
+    private fun drawBoard() = (1..3).forEach { line -> (1..3).forEach { column -> output(" ${board[Point(line, column)] ?: SPACE} ${if (column == 3) "\n" else "|"}") } }
 
-    private fun checkEndGame(player: Player) = if(checkWinLine(player) || checkWinColumn(player) || checkWinDiagonal(player)) "Player $player won!!!" else if(board.containsValue(null)) null else "There was no winner."
+    // If there is a winner or a tie, a message will be sent back.
+    private fun checkEndGame(player: Player) = if(checkWinColumnOrLine(player) || checkWinDiagonal(player)) "Player $player won!!!" else if(board.containsValue(null)) null else "There was no winner."
 
-    private fun checkWinLine(player: Player) = (1 until 4).any { line -> (1 until 4).all { column -> player == board[Point(line, column)] } }
-
-    private fun checkWinColumn(player: Player) = (1 until 4).any { column -> (1 until 4).all { line -> player == board[Point(line, column)] } }
+    private fun checkWinColumnOrLine(player: Player) = (1..3).any { fixed -> (1..3).all { player == board[Point(fixed, it)] } || (1..3).all { player == board[Point(it, fixed)] } }
 
     // If the center belongs to the player then check the corner squares.
     private fun checkWinDiagonal(player: Player) = player == board[Point(2, 2)] && ((player == board[Point(1, 1)]) && (player == board[Point(3, 3)]) ||

@@ -71,16 +71,13 @@ public class TicTacToe {
         range(1, 4).forEach(line -> range(1, 4).forEach(column -> output.accept(String.format(" %s " + (column == 3 ? "%n" : "|"), Objects.toString(board.get(new Point(line, column)), SPACE)))));
     }
 
+    // If there is a winner or a tie, a message will be sent back.
     private String checkEndGame(final Player player) {
-        return checkWinLine(player) || checkWinColumn(player) || checkWinDiagonal(player) ? String.format("Player %s won!!!", player) : board.containsValue(null) ? null : "There was no winner.";
+        return checkWinColumnOrLine(player) || checkWinDiagonal(player) ? String.format("Player %s won!!!", player) : board.containsValue(null) ? null : "There was no winner.";
     }
 
-    private boolean checkWinLine(final Player player) {
-        return range(1, 4).anyMatch(line -> range(1, 4).allMatch(column -> player.equals(board.get(new Point(line, column)))));
-    }
-
-    private boolean checkWinColumn(final Player player) {
-        return range(1, 4).anyMatch(column -> range(1, 4).allMatch(line -> player.equals(board.get(new Point(line, column)))));
+    private boolean checkWinColumnOrLine(final Player player) {
+        return range(1, 4).anyMatch(fixed -> range(1, 4).allMatch(column -> player.equals(board.get(new Point(fixed, column)))) || range(1, 4).allMatch(line -> player.equals(board.get(new Point(line, fixed)))));
     }
 
     // If the center belongs to the player then check the corner squares.
