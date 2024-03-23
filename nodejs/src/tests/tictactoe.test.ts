@@ -58,7 +58,7 @@ describe("win column", () => {
                                                      { line: 2, column: 2 },
                                                      { line: 3, column: 1 }], ["Player X won!!!"]))
 
-});
+})
 
 describe("win diagonal", () => {
 
