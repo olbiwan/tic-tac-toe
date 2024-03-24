@@ -41,7 +41,7 @@ module.exports = class TicTacToe {
         [1, 2, 3].forEach(line => {
             [1, 2, 3].forEach(column => {
                 let player = this.board[`${line},${column}`]
-                process.stdout.write(`${player == null ? " " : player}${column != 3 ? " | " : "\n"}`)
+                process.stdout.write(`${player ?? " "}${column != 3 ? " | " : "\n"}`)
             })
         })
 

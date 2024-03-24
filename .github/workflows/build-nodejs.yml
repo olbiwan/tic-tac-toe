@@ -36,6 +36,6 @@ jobs:
             -Dsonar.core.codeCoveragePlugin=cobertura
             -Dsonar.organization=olbiwan
             -Dsonar.projectKey=tictactoe-nodejs
-            -Dsonar.projectVersion=3.0.0
+            -Dsonar.projectVersion=3.1.0
             -Dsonar.javascript.lcov.reportPaths=./nodejs/coverage/lcov.info
             -Dsonar.sources=./nodejs/

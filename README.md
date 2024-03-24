@@ -1,9 +1,9 @@
 <img align="right" width="20%" src="tic-tac-toe.png">
 
-[![Latest release](https://img.shields.io/github/v/release/olbiwan/tic-tac-toe?label=Latest%20release&style=social)](https://github.com/olbiwan/tic-tac-toe/releases/tag/073023)
+[![Latest release](https://img.shields.io/github/v/release/olbiwan/tic-tac-toe?label=Latest%20release&style=social)](https://github.com/olbiwan/tic-tac-toe/releases)
 
-![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-blue?logo=eclipseide)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-black?logo=intellijidea)
+[![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-blue?logo=eclipseide)](https://eclipseide.org)
+[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-black?logo=intellijidea)](https://www.jetbrains.com/idea)
 
 [![Java](https://github.com/olbiwan/tic-tac-toe/actions/workflows/build-java.yml/badge.svg?branch=main)](https://github.com/olbiwan/tic-tac-toe/actions/workflows/build-java.yml)
 [![Kotlin](https://github.com/olbiwan/tic-tac-toe/actions/workflows/build-kotlin.yml/badge.svg?branch=main)](https://github.com/olbiwan/tic-tac-toe/actions/workflows/build-kotlin.yml)
@@ -128,35 +128,110 @@ sequenceDiagram
     <tbody>
         <tr>
             <td rowspan><a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a></td>
-            <td rowspan><img src="https://img.shields.io/badge/build-Maven-blue?logo=apachemaven" alt="Maven"></td>
-            <td rowspan><img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity"></td>
-            <td rowspan><img src="https://img.shields.io/badge/cyclomatic-26-green?logo=sonarcloud" alt="Cyclomatic Complexity"></td>
-            <td rowspan><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=coverage" alt="Coverage"></td>
-            <td rowspan><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=ncloc" alt="Lines of Code"></td>
+            <td rowspan>
+                <a href="https://maven.apache.org">
+                    <img src="https://img.shields.io/badge/build-Maven-blue?logo=apachemaven" alt="Maven">
+                </a>
+            </td>
+            <td rowspan>
+                <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-java">
+                    <img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity">
+                </a>
+            </td>
+            <td rowspan>
+                <a href="https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-java">
+                    <img src="https://img.shields.io/badge/cyclomatic-26-green?logo=sonarcloud" alt="Cyclomatic Complexity">
+                </a>
+            </td>
+            <td rowspan>
+                <a href="https://sonarcloud.io/component_measures?metric=coverage&id=tictactoe-java">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=coverage" alt="Coverage">
+                </a>
+            </td>
+            <td rowspan>
+                <a href="https://sonarcloud.io/component_measures?metric=ncloc&selected=tictactoe-java%3Apom.xml&id=tictactoe-java">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-java&metric=ncloc" alt="Lines of Code">
+                </a>
+            </td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">Kotlin</a></td>
-            <td><img src="https://img.shields.io/badge/build-Maven-blue?logo=apachemaven" alt="Maven"></td>
-            <td><img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity"></td>
-            <td><img src="https://img.shields.io/badge/cyclomatic-21-green?logo=sonarcloud" alt="Cyclomatic Complexity"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=coverage" alt="Coverage"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=ncloc" alt="Lines of Code"></td>
+            <td>
+                <a href="https://maven.apache.org">
+                   <img src="https://img.shields.io/badge/build-Maven-blue?logo=apachemaven" alt="Maven">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-kotlin">
+                   <img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-kotlin">
+                   <img src="https://img.shields.io/badge/cyclomatic-21-green?logo=sonarcloud" alt="Cyclomatic Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=coverage&id=tictactoe-kotlin">
+                   <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=coverage" alt="Coverage">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=ncloc&id=tictactoe-kotlin">
+                   <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-kotlin&metric=ncloc" alt="Lines of Code">
+                </a>
+            </td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Node.js">Node.js</a></td>
-            <td><img src="https://img.shields.io/badge/build-NPM-blue?logo=npm" alt="NPM"></td>
-            <td><img src="https://img.shields.io/badge/cognitive-0-green?logo=sonarcloud" alt="Cognitive Complexity"></td>
-            <td><img src="https://img.shields.io/badge/cyclomatic-55-green?logo=sonarcloud" alt="Cyclomatic Complexity"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=coverage" alt="Coverage"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=ncloc" alt="Lines of Code"></td>
+            <td>
+                <a href="https://www.npmjs.com">
+                    <img src="https://img.shields.io/badge/build-NPM-blue?logo=npm" alt="NPM">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-nodejs">
+                    <img src="https://img.shields.io/badge/cognitive-0-green?logo=sonarcloud" alt="Cognitive Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-nodejs">
+                    <img src="https://img.shields.io/badge/cyclomatic-55-green?logo=sonarcloud" alt="Cyclomatic Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=coverage&id=tictactoe-nodejs">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=coverage" alt="Coverage">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=ncloc&id=tictactoe-nodejs">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-nodejs&metric=ncloc" alt="Lines of Code"></td>
+                </a>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></td>
             <td></td>
-            <td><img src="https://img.shields.io/badge/cognitive-29-green?logo=sonarcloud" alt="Cognitive Complexity"></td>
-            <td><img src="https://img.shields.io/badge/cyclomatic-35-green?logo=sonarcloud" alt="Cyclomatic Complexity"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=coverage" alt="Coverage"></td>
-            <td><img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=ncloc" alt="Lines of Code"></td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-python">
+                    <img src="https://img.shields.io/badge/cognitive-29-green?logo=sonarcloud" alt="Cognitive Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-python">
+                    <img src="https://img.shields.io/badge/cyclomatic-35-green?logo=sonarcloud" alt="Cyclomatic Complexity">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=coverage&id=tictactoe-python">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=coverage" alt="Coverage">
+                </a>
+            </td>
+            <td>
+                <a href="https://sonarcloud.io/component_measures?metric=ncloc&id=tictactoe-python">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=tictactoe-python&metric=ncloc" alt="Lines of Code">
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>

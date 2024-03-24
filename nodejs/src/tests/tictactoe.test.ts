@@ -1,4 +1,4 @@
-const TicTacToe = require("../TicTacToe.ts")
+const TicTacToe = require("../main/TicTacToe.ts")
 
 playWithPositions = (plays, messages) => {
 
