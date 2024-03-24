@@ -34,6 +34,6 @@ jobs:
             -Dsonar.core.codeCoveragePlugin=cobertura
             -Dsonar.organization=olbiwan
             -Dsonar.projectKey=tictactoe-python
-            -Dsonar.projectVersion=3.0.0
+            -Dsonar.projectVersion=3.0.1
             -Dsonar.python.coverage.reportPaths=*coverage*.xml
             -Dsonar.sources=./python/

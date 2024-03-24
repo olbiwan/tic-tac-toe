@@ -1,9 +1,8 @@
 {
     "name": "tictactoe",
-    "version": "1.0.0",
-    "main": "./tictactoeTicTacToeTypeScript.ts",
+    "version": "3.1.0",
     "scripts": {
-        "start": "node ./tictactoe/index.ts",
+        "start": "node ./src/main/index.ts",
         "test": "jest --coverage"
     },
     "author": "William Peterson Olbi",
