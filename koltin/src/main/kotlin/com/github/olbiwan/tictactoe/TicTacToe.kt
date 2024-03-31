@@ -19,16 +19,9 @@ class TicTacToe(private val input: () -> String?, private val output: (message: 
     // Represents the players and an empty position.
     enum class Player { X, O }
 
-    fun start() {
-        // A player has a maximum of 5 moves.
-        endLoop@ for (i in 1..5) for (player in Player.values()) {
-            val messageEndGame = play(player)
-            if (messageEndGame != null) {
-                output(messageEndGame)
-                break@endLoop
-            }
-        }
-    }
+    fun start()
+        // A player has a maximum of 4,5 moves.
+        = repeat(5) { Player.values().forEach { if(play(it)?.let { message -> output(message) } != null) return }}
 
     private fun play(player: Player): String? {
 

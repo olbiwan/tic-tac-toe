@@ -19,7 +19,7 @@ class TicTacToe:
         O = 'O'
 
     def start(self):
-        # A player has a maximum of 5 moves.
+        # A player has a maximum of 4,5 moves.
         for _ in range(1, 6):
             for player in self.Player:
                 message_end_game = self.play(player)

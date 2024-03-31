@@ -12,7 +12,7 @@ module.exports = class TicTacToe {
     }
 
     start = () => {
-        // A player has a maximum of 5 moves.
+        // A player has a maximum of 4,5 moves.
         for(let moves = 0; moves < 5; moves++) for(let player of ["X", "O"]) {
             let messageEndGame = this.play(player)
             if(messageEndGame) {

@@ -135,7 +135,7 @@ sequenceDiagram
             </td>
             <td rowspan>
                 <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-java">
-                    <img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity">
+                    <img src="https://img.shields.io/badge/cognitive-18-green?logo=sonarcloud" alt="Cognitive Complexity">
                 </a>
             </td>
             <td rowspan>
@@ -163,12 +163,12 @@ sequenceDiagram
             </td>
             <td>
                 <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-kotlin">
-                   <img src="https://img.shields.io/badge/cognitive-19-green?logo=sonarcloud" alt="Cognitive Complexity">
+                   <img src="https://img.shields.io/badge/cognitive-15-green?logo=sonarcloud" alt="Cognitive Complexity">
                 </a>
             </td>
             <td>
                 <a href="https://sonarcloud.io/component_measures?metric=complexity&id=tictactoe-kotlin">
-                   <img src="https://img.shields.io/badge/cyclomatic-21-green?logo=sonarcloud" alt="Cyclomatic Complexity">
+                   <img src="https://img.shields.io/badge/cyclomatic-19-green?logo=sonarcloud" alt="Cyclomatic Complexity">
                 </a>
             </td>
             <td>
@@ -211,7 +211,11 @@ sequenceDiagram
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></td>
-            <td></td>
+             <td>
+                <a href="https://www.npmjs.com">
+                    <img src="https://img.shields.io/badge/build-pip-blue?logo=pip" alt="pip">
+                </a>
+            </td>
             <td>
                 <a href="https://sonarcloud.io/component_measures?metric=cognitive_complexity&id=tictactoe-python">
                     <img src="https://img.shields.io/badge/cognitive-29-green?logo=sonarcloud" alt="Cognitive Complexity">

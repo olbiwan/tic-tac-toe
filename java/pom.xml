@@ -6,7 +6,7 @@
 
     <groupId>br.com.olbiwan</groupId>
     <artifactId>tictactoe-java</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <packaging>jar</packaging>
 
     <name>Tic-tac-toe in Java</name>

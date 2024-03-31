@@ -40,12 +40,12 @@ public class TicTacToe {
     }
 
     public void start() {
-        // A player has a maximum of 5 moves.
-        endLoop: for(int i = 1; i <= 5; i++) for(Player player : Player.values()) {
+        // A player has a maximum of 4,5 moves.
+        for(int i = 1; i <= 5; i++) for(Player player : Player.values()) {
             final var messageEndGame = play(player);
             if(messageEndGame != null) {
                 output.accept(messageEndGame);
-                break endLoop;
+                return;
             }
         }
     }
